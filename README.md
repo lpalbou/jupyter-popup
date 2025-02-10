@@ -33,6 +33,7 @@ create_popup(html_content, "HTML Content")
 - Works with HTML content
 - Doesn't interfere with notebook layout
 - Proper contrast and visibility in both light and dark themes
+- Version 0.1.2 works within a IPython app with button callbacks
 
 ## Requirements
 
