@@ -24,7 +24,29 @@ html_content = """
 </div>
 """
 create_popup(html_content, "HTML Content")
+
+# If using with IPython display and button call backs
+import ipywidgets as widgets
+from IPython.display import display
+from jupyter_popup import create_popup
+
+output = widgets.Output()
+
+def message():
+    create_popup("My awesome pop up")
+
+def test_popup():
+    with output:
+        message()
+
+test_button = widgets.Button(description="Test")
+test_button.on_click(lambda b: test_popup())
+
+display(test_button)
+display(output)
 ```
+
+
 
 ## Features
 
